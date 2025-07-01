@@ -3,6 +3,7 @@ import json
 from datetime import datetime, timedelta
 import random
 
+# --- Configuration ---
 NUM_TRACTORS = 60
 NUM_MONTHS = 120 # 10 years * 12 months
 START_DATE = datetime(2015, 7, 1) # Start in July 2015
@@ -32,6 +33,25 @@ BASE_TRACTOR_SPECS = {
       {"name": "John Deere ExactEmerge Planter", "type": "Planting", "weight_kg": 9000}
     ]
 }
+
+# --- Seasonal Operating Profiles for Champaign, IL (Corn/Soybean belt) ---
+# Define average operating days and average daily hours per month
+# This is an educated guess based on typical farming cycles.
+MONTHLY_OPERATING_PROFILE = {
+    1: {'operating_days_range': (2, 8), 'daily_hours_range': (2, 5), 'primary_mode': 'Transport/Idle'}, # Jan: Low, winter, snow, transport
+    2: {'operating_days_range': (3, 10), 'daily_hours_range': (2, 6), 'primary_mode': 'Transport/Idle'}, # Feb: Low, winter, snow, transport
+    3: {'operating_days_range': (8, 18), 'daily_hours_range': (4, 8), 'primary_mode': 'Tillage/Prep'}, # Mar: Spring prep, warmer
+    4: {'operating_days_range': (18, 28), 'daily_hours_range': (8, 14), 'primary_mode': 'Planting/Tillage'}, # Apr: High, planting begins
+    5: {'operating_days_range': (18, 28), 'daily_hours_range': (8, 14), 'primary_mode': 'Planting/Spraying'}, # May: High, planting/early spraying
+    6: {'operating_days_range': (10, 20), 'daily_hours_range': (6, 10), 'primary_mode': 'Cultivating/Hay'}, # Jun: Medium-High, cultivating, hay
+    7: {'operating_days_range': (8, 18), 'daily_hours_range': (5, 9), 'primary_mode': 'Spraying/Field Maintenance'}, # Jul: Medium, summer maintenance, some spraying
+    8: {'operating_days_range': (10, 20), 'daily_hours_range': (6, 10), 'primary_mode': 'Spraying/Light Tillage'}, # Aug: Medium, pre-harvest, light tillage
+    9: {'operating_days_range': (18, 28), 'daily_hours_range': (8, 14), 'primary_mode': 'Harvesting'}, # Sep: High, harvest begins
+    10: {'operating_days_range': (18, 28), 'daily_hours_range': (8, 14), 'primary_mode': 'Harvesting/Tillage'}, # Oct: High, peak harvest/post-harvest tillage
+    11: {'operating_days_range': (15, 25), 'daily_hours_range': (6, 10), 'primary_mode': 'Tillage/Fertilizing'}, # Nov: High-Medium, post-harvest tillage/fertilizing
+    12: {'operating_days_range': (5, 15), 'daily_hours_range': (3, 7), 'primary_mode': 'Tillage/Transport/Idle'} # Dec: Medium-Low, late tillage, transport, winter prep
+}
+
 
 # --- Helper Functions for Data Simulation ---
 
@@ -80,12 +100,13 @@ def get_simulated_soil_conditions():
         "terrain_type": "Flat" # Assuming typical Illinois farmland
     }
 
-def simulate_operational_data(current_hours, is_failure_imminent, failure_type=None):
+def simulate_operational_data(current_hours, is_failure_imminent, failure_type=None, primary_mode="Idle"):
     """
     Simulates operational data, with degradation if failure is imminent.
-    This is where the 'realism' of sensor values comes in.
+    'primary_mode' helps guide the sensor ranges.
     """
-    engine_rpm = random.uniform(800, 2200) # Varies by mode
+    # Base ranges - will be adjusted by mode
+    engine_rpm = random.uniform(800, 2200)
     engine_load = random.uniform(20, 95)
     coolant_temp = random.uniform(85, 95)
     oil_temp = random.uniform(90, 105)
@@ -98,9 +119,9 @@ def simulate_operational_data(current_hours, is_failure_imminent, failure_type=N
 
     hydraulic_temp = random.uniform(60, 85)
     transmission_temp = random.uniform(70, 90)
-    oil_quality = random.uniform(0.75, 1.0) # Gradually degrades
+    oil_quality = random.uniform(0.75, 1.0) # Gradually degrades over total hours
     vibration_engine = random.uniform(0.05, 0.2)
-    vibration_trans = random.uniform(0.05, 0.2) # Focus for failure
+    vibration_trans = random.uniform(0.05, 0.2)
     vibration_axle = random.uniform(0.03, 0.1)
     vibration_bearing = random.uniform(0.03, 0.1)
 
@@ -108,27 +129,27 @@ def simulate_operational_data(current_hours, is_failure_imminent, failure_type=N
     alternator_output = random.uniform(80, 150)
     error_codes = []
 
-    working_mode = random.choice(["Plowing", "Planting", "Harvesting", "Transport", "Idle"])
     vehicle_speed = 0.0
-    if working_mode == "Plowing":
+    implement_attached = "None"
+    
+    # Adjust ranges based on primary working mode
+    if primary_mode in ["Plowing", "Planting", "Harvesting", "Tillage/Prep", "Cultivating/Hay", "Spraying/Field Maintenance", "Spraying/Light Tillage", "Harvesting/Tillage", "Tillage/Fertilizing"]:
+        # High load activities
         engine_rpm = random.uniform(1800, 2200)
         engine_load = random.uniform(70, 95)
         fuel_consumption = random.uniform(25, 35)
         hydraulic_temp = random.uniform(75, 90)
         transmission_temp = random.uniform(80, 95)
         vehicle_speed = random.uniform(6, 12)
-    elif working_mode == "Transport":
-        engine_rpm = random.uniform(1500, 2000)
-        engine_load = random.uniform(30, 70)
-        fuel_consumption = random.uniform(10, 25)
+        implement_attached = random.choice(["John Deere 2730 Combo Ripper", "John Deere ExactEmerge Planter", "John Deere 9R Tiller", "John Deere 2510H Nutrient Applicator"])
+    elif primary_mode == "Transport/Idle":
+        # Lower load activities
+        engine_rpm = random.uniform(1000, 1500)
+        engine_load = random.uniform(20, 50)
+        fuel_consumption = random.uniform(8, 15)
         hydraulic_temp = random.uniform(60, 75)
         transmission_temp = random.uniform(70, 85)
-        vehicle_speed = random.uniform(20, 40)
-    elif working_mode == "Idle":
-        engine_rpm = random.uniform(700, 900)
-        engine_load = random.uniform(5, 15)
-        fuel_consumption = random.uniform(2, 5)
-        vehicle_speed = 0.0
+        vehicle_speed = random.uniform(0, 30) # Varies from idle to road speed
 
     # Simulate degradation if failure is imminent (e.g., transmission)
     if is_failure_imminent and failure_type == "Transmission":
@@ -189,8 +210,8 @@ def simulate_operational_data(current_hours, is_failure_imminent, failure_type=N
             "distance_traveled_km": round(random.uniform(0, 50), 1), # Daily distance
             "gps_latitude": round(random.uniform(40.1, 40.2), 4),
             "gps_longitude": round(random.uniform(-88.3, -88.1), 4),
-            "working_mode": working_mode,
-            "implement_attached": "John Deere 2730 Combo Ripper" if working_mode in ["Plowing", "Planting", "Harvesting"] else "None",
+            "working_mode": primary_mode, # Pass the dominant mode for the day
+            "implement_attached": implement_attached,
             "implement_hours_this_session": round(random.uniform(0, 8), 1) # Hours for current op
         },
         "other_sensors": {
@@ -218,6 +239,7 @@ def generate_complaint(complaint_desc):
         "description": complaint_desc
     }
 
+# --- Main Generation Loop ---
 for i in range(NUM_TRACTORS):
     tractor_id = f'JDL30005678{i}'
     folder_name = f'tractor_{i}'
@@ -226,7 +248,7 @@ for i in range(NUM_TRACTORS):
     current_hours_cumulative = 0.0
     # Randomly assign a failure point for this tractor's transmission
     transmission_failure_hours = TRACTOR_FAILURE_HOURS[tractor_id]
-    # Check if this tractor had an alternator fixed
+    # Check if this tractor had an an alternator issue and repaired
     alternator_fixed_hours = TRACTOR_ALTERNATOR_FIXED_HOURS[tractor_id]
     alternator_already_failed = False
     if alternator_fixed_hours is not None:
@@ -245,14 +267,22 @@ for i in range(NUM_TRACTORS):
         monthly_maintenance_summary = []
         monthly_customer_complaints = []
 
-        # Simulate daily operation for approx 20 days in the month (some days off)
-        operating_days_this_month = random.randint(15, 25)
-        for day in range(operating_days_this_month):
-            daily_operating_hours = random.uniform(5, 10) # 5-10 hours per operating day
+        # Get operating profile for the current month
+        month = current_date.month
+        profile = MONTHLY_OPERATING_PROFILE[month]
+        operating_days_this_month_range = profile['operating_days_range']
+        daily_hours_this_month_range = profile['daily_hours_range']
+        primary_working_mode_for_month = profile['primary_mode']
+
+        operating_days_this_month = random.randint(*operating_days_this_month_range)
+
+        for day_of_month_idx in range(operating_days_this_month):
+            daily_operating_hours = random.uniform(*daily_hours_this_month_range)
             current_hours_cumulative += daily_operating_hours
 
             # Determine if a major failure is imminent for this tractor
             is_transmission_failure_imminent = False
+            # Check for failure within a 200-hour window before actual failure
             if current_hours_cumulative >= (transmission_failure_hours - 200) and \
                current_hours_cumulative < transmission_failure_hours:
                 is_transmission_failure_imminent = True
@@ -266,13 +296,14 @@ for i in range(NUM_TRACTORS):
                 # This is the "failure event" day
                 is_transmission_failure_imminent = True # Still shows bad signs just before 0 RUL
                 # Simulate the actual failure record
+                # Use current_date + timedelta(days=day_of_month_idx) to get the correct day
                 monthly_telemetry_records.append({
-                    "timestamp": (current_date + timedelta(days=day, hours=random.randint(8,17))).isoformat() + "Z",
+                    "timestamp": (current_date + timedelta(days=day_of_month_idx, hours=random.randint(8,17))).isoformat() + "Z",
                     "current_operating_hours": round(current_hours_cumulative, 1),
                     "remaining_useful_life_hours": 0.0, # Failure occurred
                     "failure_imminent": True,
-                    "telemetry": simulate_operational_data(current_hours_cumulative, True, "Transmission"),
-                    "environmental_context": get_simulated_weather(current_date + timedelta(days=day)),
+                    "telemetry": simulate_operational_data(current_hours_cumulative, True, "Transmission", primary_working_mode_for_month),
+                    "environmental_context": get_simulated_weather(current_date + timedelta(days=day_of_month_idx)),
                     "human_factors_external": {
                         "operator_id_anonymized": random.choice(["OPR_XYZ001", "OPR_ABC789"]),
                         "operator_experience_level": random.choice(["Experienced", "Intermediate"]),
@@ -300,7 +331,8 @@ for i in range(NUM_TRACTORS):
 
             # Simulate alternator failure for some tractors
             is_alternator_failure_imminent = False
-            if alternator_fixed_hours and not alternator_already_failed and \
+            # Check for failure within a 50-hour window before actual failure
+            if alternator_fixed_hours is not None and not alternator_already_failed and \
                current_hours_cumulative >= (alternator_fixed_hours - 50) and \
                current_hours_cumulative < alternator_fixed_hours:
                 is_alternator_failure_imminent = True
@@ -308,17 +340,17 @@ for i in range(NUM_TRACTORS):
                     monthly_customer_complaints.append(
                         generate_complaint("Battery warning light flickers on dashboard.")
                     )
-            elif alternator_fixed_hours and not alternator_already_failed and \
+            elif alternator_fixed_hours is not None and not alternator_already_failed and \
                  current_hours_cumulative >= alternator_fixed_hours and \
                  current_hours_cumulative < (alternator_fixed_hours + daily_operating_hours):
                 is_alternator_failure_imminent = True # Still shows bad signs just before 0 RUL
                 monthly_telemetry_records.append({
-                    "timestamp": (current_date + timedelta(days=day, hours=random.randint(8,17))).isoformat() + "Z",
+                    "timestamp": (current_date + timedelta(days=day_of_month_idx, hours=random.randint(8,17))).isoformat() + "Z",
                     "current_operating_hours": round(current_hours_cumulative, 1),
                     "remaining_useful_life_hours": transmission_failure_hours - current_hours_cumulative,
                     "failure_imminent": True, # This failure is imminent, but major trans. failure is still future
-                    "telemetry": simulate_operational_data(current_hours_cumulative, True, "Alternator"),
-                    "environmental_context": get_simulated_weather(current_date + timedelta(days=day)),
+                    "telemetry": simulate_operational_data(current_hours_cumulative, True, "Alternator", primary_working_mode_for_month),
+                    "environmental_context": get_simulated_weather(current_date + timedelta(days=day_of_month_idx)),
                     "human_factors_external": {
                         "operator_id_anonymized": random.choice(["OPR_XYZ001", "OPR_ABC789"]),
                         "operator_experience_level": random.choice(["Experienced", "Intermediate"]),
@@ -345,15 +377,16 @@ for i in range(NUM_TRACTORS):
             # Append general telemetry record
             telemetry_data = simulate_operational_data(
                 current_hours_cumulative,
-                is_transmission_failure_imminent or is_alternator_failure_imminent
+                is_transmission_failure_imminent or is_alternator_failure_imminent,
+                primary_mode=primary_working_mode_for_month # Pass the working mode to influence sensor data
             )
             monthly_telemetry_records.append({
-                "timestamp": (current_date + timedelta(days=day, hours=random.randint(0,23))).isoformat() + "Z",
+                "timestamp": (current_date + timedelta(days=day_of_month_idx, hours=random.randint(0,23))).isoformat() + "Z",
                 "current_operating_hours": round(current_hours_cumulative, 1),
-                "remaining_useful_life_hours": round(transmission_failure_hours - current_hours_cumulative, 1),
+                "remaining_useful_life_hours": round(max(0.0, transmission_failure_hours - current_hours_cumulative), 1), # Ensure RUL doesn't go negative before actual failure
                 "failure_imminent": is_transmission_failure_imminent or is_alternator_failure_imminent,
                 "telemetry": telemetry_data,
-                "environmental_context": get_simulated_weather(current_date + timedelta(days=day)),
+                "environmental_context": get_simulated_weather(current_date + timedelta(days=day_of_month_idx)),
                 "human_factors_external": {
                     "operator_id_anonymized": random.choice(["OPR_XYZ001", "OPR_ABC789", "OPR_DEF456"]),
                     "operator_experience_level": random.choice(["Experienced", "Intermediate", "New"]),
@@ -364,6 +397,7 @@ for i in range(NUM_TRACTORS):
 
         # Add scheduled maintenance if applicable (e.g., every 500 hours or annually)
         # This is a simplification; in real life, you'd check hours and date.
+        # This logic needs to be more robust for real-world scenarios
         if (month_offset % 12 == 0 and month_offset > 0) or (current_hours_cumulative % 500 < (daily_operating_hours * 2) and current_hours_cumulative // 500 > (current_hours_cumulative - daily_operating_hours*2) // 500):
             if current_hours_cumulative > 100: # Don't add for very first month
                  monthly_maintenance_summary.append(
