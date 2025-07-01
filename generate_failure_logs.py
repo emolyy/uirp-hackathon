@@ -3,6 +3,7 @@ import json
 from datetime import datetime, timedelta
 import random
 import csv # Import the csv module
+import math
 
 # --- Constants for Component Lifespans and Probability Tuning ---
 COMPONENT_LIFESPANS = {
@@ -121,8 +122,8 @@ def simulate_failures(tractor_data):
                 # --- Capture only the specified data for the CSV row ---
                 failures_for_csv.append({
                     "component_failed": component_name,
-                    "failure_timestamp": timestamp_str[:9],
-                    "operating_hours_at_failure": current_operating_hours,
+                    "failure_timestamp": timestamp_str[:7],
+                    "operating_hours_at_failure": math.floor(current_operating_hours),
                 })
                 # Simulate repair
                 comp_state["hours_since_last_repair"] = 0.0
@@ -143,7 +144,7 @@ CSV_HEADERS = ["component_failed", "failure_timestamp", "operating_hours_at_fail
 
 # Iterate through tractor data folders (e.g., tractor_0, tractor_1, etc.)
 for tractor_folder_num in range(0, 60):
-    current_tractor_folder_path = os.path.join(base_data_directory, 'tractor_' + str(tractor_folder_num))
+    current_tractor_folder_path = os.path.join(base_data_directory, f"tractor_{tractor_folder_num}")
 
     if not os.path.isdir(current_tractor_folder_path):
         print(f"Error: Folder '{current_tractor_folder_path}' not found. Skipping.")
@@ -171,7 +172,7 @@ for tractor_folder_num in range(0, 60):
 
     # --- Output the simulated results to a CSV file PER FOLDER PROCESSED ---
     output_filename = f"simulated_failure_results_tractor_{tractor_folder_num}.csv" # Changed extension to .csv
-    output_filepath = os.path.join(base_data_directory, f"tractor_{tractor_folder_num}",output_filename)
+    output_filepath = os.path.join(base_data_directory, "failure_logs", output_filename)
 
     if current_folder_csv_rows: # Only write if there are failures to report
         with open(output_filepath, 'w', newline='') as outfile: # newline='' is crucial for CSV
