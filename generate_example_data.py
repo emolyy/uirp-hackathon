@@ -3,9 +3,9 @@ import json
 from datetime import datetime, timedelta
 import random
 
-NUM_TRACTORS = 10
-NUM_MONTHS = 60 # 5 years * 12 months
-START_DATE = datetime(2020, 7, 1) # Start in July 2020
+NUM_TRACTORS = 60
+NUM_MONTHS = 120 # 10 years * 12 months
+START_DATE = datetime(2015, 7, 1) # Start in July 2015
 
 # Define a "failure threshold" for RUL calculation (e.g., a transmission fails at these hours)
 # Each tractor will have a unique failure_hours_threshold
@@ -20,11 +20,12 @@ TRACTOR_ALTERNATOR_FIXED_HOURS = {
 
 # Base specifications (same for all tractors in this scenario)
 BASE_TRACTOR_SPECS = {
-    "model": "John Deere 8R 340",
-    "year": 2020,
-    "engine_type": "John Deere PowerTech PSS 9.0L",
-    "horsepower_hp": 340,
-    "transmission_type": "e23 PowerShift with Efficiency Manager",
+    "model": "John Deere 6R 130",
+    "year": 2015,
+    "engine_type": "John Deere PowerTech PSS 4.5L",
+    "horsepower_hp": 130,
+    "max_horsepower_ipm": 143,
+    "transmission_type": "AutoQuad PLUS or IVT",
     "hours_at_purchase": 0.0, # Assuming new tractors
     "attachments_specs": [
       {"name": "John Deere 2730 Combo Ripper", "type": "Tillage", "weight_kg": 4500},

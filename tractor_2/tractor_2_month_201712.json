@@ -1,0 +1,270 @@
+{
+  "tractor_id": "JDL300056782",
+  "data_month": "2017-12",
+  "tractor_specifications": {
+    "model": "John Deere 8R 340",
+    "year": 2020,
+    "engine_type": "John Deere PowerTech PSS 9.0L",
+    "horsepower_hp": 340,
+    "transmission_type": "e23 PowerShift with Efficiency Manager",
+    "hours_at_purchase": 0.0,
+    "attachments_specs": [
+      {
+        "name": "John Deere 2730 Combo Ripper",
+        "type": "Tillage",
+        "weight_kg": 4500
+      },
+      {
+        "name": "John Deere ExactEmerge Planter",
+        "type": "Planting",
+        "weight_kg": 9000
+      }
+    ]
+  },
+  "monthly_telemetry_records": [
+    {
+      "timestamp": "2017-12-21T10:00:00Z",
+      "current_operating_hours": 13145.4,
+      "remaining_useful_life_hours": 6.6,
+      "failure_imminent": true,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 1858.0,
+          "engine_load_percent": 91.1,
+          "engine_coolant_temp_c": 87.6,
+          "engine_oil_temp_c": 98.7,
+          "oil_pressure_psi": 41.1,
+          "fuel_consumption_rate_l_hr": 27.9,
+          "fuel_level_percent": 43.0,
+          "exhaust_gas_temp_c": 467.0,
+          "turbocharger_speed_rpm": 77948.0,
+          "turbocharger_pressure_psi": 23.3
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 100,
+          "hydraulic_fluid_temp_c": 89.3,
+          "transmission_fluid_level_percent": 98,
+          "transmission_fluid_temp_c": 92.8,
+          "coolant_level_percent": 94,
+          "oil_quality_index": 0.95
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.12,
+          "transmission_vibration_rms_g": 0.15,
+          "axle_vibration_rms_g": 0.06,
+          "bearing_vibration_rms_g": 0.06
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 134.64107544844268,
+          "tire_pressure_front_left_psi": 23,
+          "tire_pressure_front_right_psi": 28,
+          "tire_pressure_rear_left_psi": 16,
+          "tire_pressure_rear_right_psi": 18,
+          "fuel_pressure_psi": 62.354606290989445
+        },
+        "electrical_system": {
+          "battery_voltage_v": 13.6,
+          "alternator_output_amps": 148.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 44.8,
+          "gps_latitude": 40.1829,
+          "gps_longitude": -88.2338,
+          "working_mode": "Plowing",
+          "implement_attached": "John Deere 2730 Combo Ripper",
+          "implement_hours_this_session": 0.6
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 7.5
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": 1.6,
+        "humidity_percent": 70.0,
+        "precipitation_mm_24hr": 2.6,
+        "wind_speed_kph": 22.4,
+        "wind_direction": "E"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_DEF456",
+        "operator_experience_level": "Intermediate",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2017-12-22T14:00:00Z",
+      "current_operating_hours": 13151.0,
+      "remaining_useful_life_hours": 1.0,
+      "failure_imminent": true,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 2191.0,
+          "engine_load_percent": 42.7,
+          "engine_coolant_temp_c": 93.7,
+          "engine_oil_temp_c": 92.9,
+          "oil_pressure_psi": 49.1,
+          "fuel_consumption_rate_l_hr": 16.4,
+          "fuel_level_percent": 86.0,
+          "exhaust_gas_temp_c": 347.0,
+          "turbocharger_speed_rpm": 105522.0,
+          "turbocharger_pressure_psi": 21.2
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 86,
+          "hydraulic_fluid_temp_c": 75.8,
+          "transmission_fluid_level_percent": 90,
+          "transmission_fluid_temp_c": 75.5,
+          "coolant_level_percent": 90,
+          "oil_quality_index": 0.82
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.12,
+          "transmission_vibration_rms_g": 0.14,
+          "axle_vibration_rms_g": 0.03,
+          "bearing_vibration_rms_g": 0.05
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 144.05657568512413,
+          "tire_pressure_front_left_psi": 27,
+          "tire_pressure_front_right_psi": 22,
+          "tire_pressure_rear_left_psi": 14,
+          "tire_pressure_rear_right_psi": 15,
+          "fuel_pressure_psi": 52.834686172709326
+        },
+        "electrical_system": {
+          "battery_voltage_v": 13.0,
+          "alternator_output_amps": 121.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 7.4,
+          "gps_latitude": 40.118,
+          "gps_longitude": -88.116,
+          "working_mode": "Planting",
+          "implement_attached": "John Deere 2730 Combo Ripper",
+          "implement_hours_this_session": 5.1
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 0.0
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": -1.1,
+        "humidity_percent": 88.0,
+        "precipitation_mm_24hr": 4.6,
+        "wind_speed_kph": 20.0,
+        "wind_direction": "N"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_XYZ001",
+        "operator_experience_level": "New",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2017-12-23T11:00:00Z",
+      "current_operating_hours": 13156.8,
+      "remaining_useful_life_hours": 0.0,
+      "failure_imminent": true,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 1134.0,
+          "engine_load_percent": 44.6,
+          "engine_coolant_temp_c": 90.8,
+          "engine_oil_temp_c": 96.3,
+          "oil_pressure_psi": 51.4,
+          "fuel_consumption_rate_l_hr": 6.9,
+          "fuel_level_percent": 76.0,
+          "exhaust_gas_temp_c": 445.0,
+          "turbocharger_speed_rpm": 86762.0,
+          "turbocharger_pressure_psi": 24.3
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 95,
+          "hydraulic_fluid_temp_c": 62.9,
+          "transmission_fluid_level_percent": 87,
+          "transmission_fluid_temp_c": 110.5,
+          "coolant_level_percent": 96,
+          "oil_quality_index": 0.88
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.17,
+          "transmission_vibration_rms_g": 0.45,
+          "axle_vibration_rms_g": 0.05,
+          "bearing_vibration_rms_g": 0.05
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 136.47332877330547,
+          "tire_pressure_front_left_psi": 26,
+          "tire_pressure_front_right_psi": 28,
+          "tire_pressure_rear_left_psi": 16,
+          "tire_pressure_rear_right_psi": 13,
+          "fuel_pressure_psi": 50.0815116309208
+        },
+        "electrical_system": {
+          "battery_voltage_v": 13.8,
+          "alternator_output_amps": 115.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 0.2,
+          "gps_latitude": 40.1976,
+          "gps_longitude": -88.1621,
+          "working_mode": "Planting",
+          "implement_attached": "John Deere 2730 Combo Ripper",
+          "implement_hours_this_session": 5.8
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 0.0
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": -7.4,
+        "humidity_percent": 82.0,
+        "precipitation_mm_24hr": 5.5,
+        "wind_speed_kph": 16.8,
+        "wind_direction": "NW"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_ABC789",
+        "operator_experience_level": "Experienced",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": [
+          {
+            "complaint_id": "COMPL_20250701105900_556",
+            "date": "2025-07-01",
+            "description": "Tractor lost all drive, loud grinding noise from transmission."
+          }
+        ]
+      }
+    }
+  ],
+  "monthly_maintenance_summary": [
+    {
+      "maintenance_id": "MAINT_20250701105900_405",
+      "date_time": "2025-07-01T10:59:00.832058Z",
+      "type": "Corrective Maintenance - Unscheduled (Major)",
+      "parts_replaced": [
+        {
+          "part_number": "R600500",
+          "description": "Transmission Clutch Pack",
+          "cost_usd": 3500.0
+        },
+        {
+          "part_number": "R600501",
+          "description": "Transmission Bearings Set",
+          "cost_usd": 800.0
+        }
+      ],
+      "labor_hours": 18.0,
+      "operator_reported_issue": "Tractor lost drive, grinding noise.",
+      "technician_diagnosis_repair": "Transmission overhaul/replacement due to severe internal wear.",
+      "root_cause_of_failure": "Accelerated component wear (transmission)",
+      "technician_notes": "Tractor had 13156.8 hours at time of service."
+    }
+  ],
+  "monthly_customer_complaints": []
+}

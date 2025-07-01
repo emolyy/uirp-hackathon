@@ -1,0 +1,128 @@
+{
+  "tractor_id": "JDL3000567814",
+  "data_month": "2016-12",
+  "tractor_specifications": {
+    "model": "John Deere 8R 340",
+    "year": 2020,
+    "engine_type": "John Deere PowerTech PSS 9.0L",
+    "horsepower_hp": 340,
+    "transmission_type": "e23 PowerShift with Efficiency Manager",
+    "hours_at_purchase": 0.0,
+    "attachments_specs": [
+      {
+        "name": "John Deere 2730 Combo Ripper",
+        "type": "Tillage",
+        "weight_kg": 4500
+      },
+      {
+        "name": "John Deere ExactEmerge Planter",
+        "type": "Planting",
+        "weight_kg": 9000
+      }
+    ]
+  },
+  "monthly_telemetry_records": [
+    {
+      "timestamp": "2016-12-26T16:00:00Z",
+      "current_operating_hours": 11944.5,
+      "remaining_useful_life_hours": 0.0,
+      "failure_imminent": true,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 1960.0,
+          "engine_load_percent": 94.5,
+          "engine_coolant_temp_c": 92.2,
+          "engine_oil_temp_c": 104.4,
+          "oil_pressure_psi": 47.8,
+          "fuel_consumption_rate_l_hr": 13.7,
+          "fuel_level_percent": 64.0,
+          "exhaust_gas_temp_c": 503.0,
+          "turbocharger_speed_rpm": 71632.0,
+          "turbocharger_pressure_psi": 24.1
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 88,
+          "hydraulic_fluid_temp_c": 62.8,
+          "transmission_fluid_level_percent": 95,
+          "transmission_fluid_temp_c": 100.1,
+          "coolant_level_percent": 93,
+          "oil_quality_index": 0.83
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.11,
+          "transmission_vibration_rms_g": 0.44,
+          "axle_vibration_rms_g": 0.03,
+          "bearing_vibration_rms_g": 0.05
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 106.58193852408586,
+          "tire_pressure_front_left_psi": 24,
+          "tire_pressure_front_right_psi": 26,
+          "tire_pressure_rear_left_psi": 12,
+          "tire_pressure_rear_right_psi": 15,
+          "fuel_pressure_psi": 59.14992702374936
+        },
+        "electrical_system": {
+          "battery_voltage_v": 14.0,
+          "alternator_output_amps": 125.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 28.1,
+          "gps_latitude": 40.1729,
+          "gps_longitude": -88.2098,
+          "working_mode": "Planting",
+          "implement_attached": "John Deere 2730 Combo Ripper",
+          "implement_hours_this_session": 1.2
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 0.0
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": -5.0,
+        "humidity_percent": 81.0,
+        "precipitation_mm_24hr": 9.2,
+        "wind_speed_kph": 13.7,
+        "wind_direction": "W"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_XYZ001",
+        "operator_experience_level": "Experienced",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": [
+          {
+            "complaint_id": "COMPL_20250701105902_292",
+            "date": "2025-07-01",
+            "description": "Tractor lost all drive, loud grinding noise from transmission."
+          }
+        ]
+      }
+    }
+  ],
+  "monthly_maintenance_summary": [
+    {
+      "maintenance_id": "MAINT_20250701105902_511",
+      "date_time": "2025-07-01T10:59:02.443138Z",
+      "type": "Corrective Maintenance - Unscheduled (Major)",
+      "parts_replaced": [
+        {
+          "part_number": "R600500",
+          "description": "Transmission Clutch Pack",
+          "cost_usd": 3500.0
+        },
+        {
+          "part_number": "R600501",
+          "description": "Transmission Bearings Set",
+          "cost_usd": 800.0
+        }
+      ],
+      "labor_hours": 18.0,
+      "operator_reported_issue": "Tractor lost drive, grinding noise.",
+      "technician_diagnosis_repair": "Transmission overhaul/replacement due to severe internal wear.",
+      "root_cause_of_failure": "Accelerated component wear (transmission)",
+      "technician_notes": "Tractor had 11944.5 hours at time of service."
+    }
+  ],
+  "monthly_customer_complaints": []
+}

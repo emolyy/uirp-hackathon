@@ -1,0 +1,1235 @@
+{
+  "tractor_id": "JDL3000567810",
+  "data_month": "2018-01",
+  "tractor_specifications": {
+    "model": "John Deere 8R 340",
+    "year": 2020,
+    "engine_type": "John Deere PowerTech PSS 9.0L",
+    "horsepower_hp": 340,
+    "transmission_type": "e23 PowerShift with Efficiency Manager",
+    "hours_at_purchase": 0.0,
+    "attachments_specs": [
+      {
+        "name": "John Deere 2730 Combo Ripper",
+        "type": "Tillage",
+        "weight_kg": 4500
+      },
+      {
+        "name": "John Deere ExactEmerge Planter",
+        "type": "Planting",
+        "weight_kg": 9000
+      }
+    ]
+  },
+  "monthly_telemetry_records": [
+    {
+      "timestamp": "2018-01-20T08:00:00Z",
+      "current_operating_hours": 13946.0,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 1734.0,
+          "engine_load_percent": 43.6,
+          "engine_coolant_temp_c": 87.1,
+          "engine_oil_temp_c": 100.1,
+          "oil_pressure_psi": 42.1,
+          "fuel_consumption_rate_l_hr": 19.1,
+          "fuel_level_percent": 44.0,
+          "exhaust_gas_temp_c": 476.0,
+          "turbocharger_speed_rpm": 122090.0,
+          "turbocharger_pressure_psi": 27.3
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 88,
+          "hydraulic_fluid_temp_c": 61.7,
+          "transmission_fluid_level_percent": 97,
+          "transmission_fluid_temp_c": 76.9,
+          "coolant_level_percent": 96,
+          "oil_quality_index": 0.8
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.16,
+          "transmission_vibration_rms_g": 0.09,
+          "axle_vibration_rms_g": 0.08,
+          "bearing_vibration_rms_g": 0.09
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 186.80850650378184,
+          "tire_pressure_front_left_psi": 23,
+          "tire_pressure_front_right_psi": 26,
+          "tire_pressure_rear_left_psi": 16,
+          "tire_pressure_rear_right_psi": 15,
+          "fuel_pressure_psi": 56.64439730359546
+        },
+        "electrical_system": {
+          "battery_voltage_v": 13.4,
+          "alternator_output_amps": 137.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 45.8,
+          "gps_latitude": 40.1446,
+          "gps_longitude": -88.261,
+          "working_mode": "Transport",
+          "implement_attached": "None",
+          "implement_hours_this_session": 1.8
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 27.7
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": -6.7,
+        "humidity_percent": 87.0,
+        "precipitation_mm_24hr": 0,
+        "wind_speed_kph": 12.4,
+        "wind_direction": "N"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_DEF456",
+        "operator_experience_level": "Intermediate",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2018-01-21T22:00:00Z",
+      "current_operating_hours": 13955.6,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 2098.0,
+          "engine_load_percent": 75.8,
+          "engine_coolant_temp_c": 88.7,
+          "engine_oil_temp_c": 104.1,
+          "oil_pressure_psi": 55.0,
+          "fuel_consumption_rate_l_hr": 29.5,
+          "fuel_level_percent": 45.0,
+          "exhaust_gas_temp_c": 419.0,
+          "turbocharger_speed_rpm": 51228.0,
+          "turbocharger_pressure_psi": 26.4
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 86,
+          "hydraulic_fluid_temp_c": 86.7,
+          "transmission_fluid_level_percent": 92,
+          "transmission_fluid_temp_c": 87.4,
+          "coolant_level_percent": 96,
+          "oil_quality_index": 0.79
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.11,
+          "transmission_vibration_rms_g": 0.13,
+          "axle_vibration_rms_g": 0.04,
+          "bearing_vibration_rms_g": 0.05
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 122.7567667003664,
+          "tire_pressure_front_left_psi": 27,
+          "tire_pressure_front_right_psi": 27,
+          "tire_pressure_rear_left_psi": 18,
+          "tire_pressure_rear_right_psi": 15,
+          "fuel_pressure_psi": 54.17121138528195
+        },
+        "electrical_system": {
+          "battery_voltage_v": 12.5,
+          "alternator_output_amps": 97.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 38.3,
+          "gps_latitude": 40.1098,
+          "gps_longitude": -88.1021,
+          "working_mode": "Plowing",
+          "implement_attached": "John Deere 2730 Combo Ripper",
+          "implement_hours_this_session": 4.5
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 8.8
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": -8.3,
+        "humidity_percent": 83.0,
+        "precipitation_mm_24hr": 0.1,
+        "wind_speed_kph": 24.1,
+        "wind_direction": "NE"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_ABC789",
+        "operator_experience_level": "Intermediate",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2018-01-22T15:00:00Z",
+      "current_operating_hours": 13962.3,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 1861.0,
+          "engine_load_percent": 32.3,
+          "engine_coolant_temp_c": 91.3,
+          "engine_oil_temp_c": 90.3,
+          "oil_pressure_psi": 43.1,
+          "fuel_consumption_rate_l_hr": 9.3,
+          "fuel_level_percent": 78.0,
+          "exhaust_gas_temp_c": 363.0,
+          "turbocharger_speed_rpm": 125472.0,
+          "turbocharger_pressure_psi": 28.7
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 89,
+          "hydraulic_fluid_temp_c": 76.7,
+          "transmission_fluid_level_percent": 93,
+          "transmission_fluid_temp_c": 83.3,
+          "coolant_level_percent": 91,
+          "oil_quality_index": 0.88
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.18,
+          "transmission_vibration_rms_g": 0.11,
+          "axle_vibration_rms_g": 0.09,
+          "bearing_vibration_rms_g": 0.09
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 103.45801739982693,
+          "tire_pressure_front_left_psi": 22,
+          "tire_pressure_front_right_psi": 24,
+          "tire_pressure_rear_left_psi": 16,
+          "tire_pressure_rear_right_psi": 16,
+          "fuel_pressure_psi": 58.90898832036914
+        },
+        "electrical_system": {
+          "battery_voltage_v": 14.0,
+          "alternator_output_amps": 108.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 31.2,
+          "gps_latitude": 40.1296,
+          "gps_longitude": -88.1734,
+          "working_mode": "Harvesting",
+          "implement_attached": "John Deere 2730 Combo Ripper",
+          "implement_hours_this_session": 0.5
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 0.0
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": 1.9,
+        "humidity_percent": 73.0,
+        "precipitation_mm_24hr": 0,
+        "wind_speed_kph": 23.7,
+        "wind_direction": "E"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_XYZ001",
+        "operator_experience_level": "Intermediate",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2018-01-23T00:00:00Z",
+      "current_operating_hours": 13967.4,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 892.0,
+          "engine_load_percent": 9.8,
+          "engine_coolant_temp_c": 88.9,
+          "engine_oil_temp_c": 103.9,
+          "oil_pressure_psi": 47.3,
+          "fuel_consumption_rate_l_hr": 2.7,
+          "fuel_level_percent": 88.0,
+          "exhaust_gas_temp_c": 369.0,
+          "turbocharger_speed_rpm": 91367.0,
+          "turbocharger_pressure_psi": 15.0
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 87,
+          "hydraulic_fluid_temp_c": 77.3,
+          "transmission_fluid_level_percent": 100,
+          "transmission_fluid_temp_c": 75.7,
+          "coolant_level_percent": 97,
+          "oil_quality_index": 0.82
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.16,
+          "transmission_vibration_rms_g": 0.07,
+          "axle_vibration_rms_g": 0.08,
+          "bearing_vibration_rms_g": 0.05
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 175.08087528091545,
+          "tire_pressure_front_left_psi": 24,
+          "tire_pressure_front_right_psi": 28,
+          "tire_pressure_rear_left_psi": 18,
+          "tire_pressure_rear_right_psi": 17,
+          "fuel_pressure_psi": 51.00539978122128
+        },
+        "electrical_system": {
+          "battery_voltage_v": 13.9,
+          "alternator_output_amps": 86.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 18.2,
+          "gps_latitude": 40.1,
+          "gps_longitude": -88.286,
+          "working_mode": "Idle",
+          "implement_attached": "None",
+          "implement_hours_this_session": 2.0
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 0.0
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": -8.7,
+        "humidity_percent": 81.0,
+        "precipitation_mm_24hr": 0,
+        "wind_speed_kph": 23.0,
+        "wind_direction": "W"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_DEF456",
+        "operator_experience_level": "Intermediate",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2018-01-24T16:00:00Z",
+      "current_operating_hours": 13973.9,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 1621.0,
+          "engine_load_percent": 40.5,
+          "engine_coolant_temp_c": 94.6,
+          "engine_oil_temp_c": 92.7,
+          "oil_pressure_psi": 58.4,
+          "fuel_consumption_rate_l_hr": 13.6,
+          "fuel_level_percent": 86.0,
+          "exhaust_gas_temp_c": 580.0,
+          "turbocharger_speed_rpm": 123570.0,
+          "turbocharger_pressure_psi": 25.3
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 99,
+          "hydraulic_fluid_temp_c": 72.9,
+          "transmission_fluid_level_percent": 99,
+          "transmission_fluid_temp_c": 75.7,
+          "coolant_level_percent": 98,
+          "oil_quality_index": 0.96
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.06,
+          "transmission_vibration_rms_g": 0.07,
+          "axle_vibration_rms_g": 0.06,
+          "bearing_vibration_rms_g": 0.09
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 142.77479463276853,
+          "tire_pressure_front_left_psi": 23,
+          "tire_pressure_front_right_psi": 22,
+          "tire_pressure_rear_left_psi": 12,
+          "tire_pressure_rear_right_psi": 16,
+          "fuel_pressure_psi": 56.7931952620684
+        },
+        "electrical_system": {
+          "battery_voltage_v": 13.1,
+          "alternator_output_amps": 143.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 33.6,
+          "gps_latitude": 40.1265,
+          "gps_longitude": -88.1461,
+          "working_mode": "Transport",
+          "implement_attached": "None",
+          "implement_hours_this_session": 1.9
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 27.4
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": -2.1,
+        "humidity_percent": 73.0,
+        "precipitation_mm_24hr": 0,
+        "wind_speed_kph": 28.3,
+        "wind_direction": "W"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_DEF456",
+        "operator_experience_level": "New",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2018-01-25T08:00:00Z",
+      "current_operating_hours": 13979.9,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 1872.0,
+          "engine_load_percent": 35.7,
+          "engine_coolant_temp_c": 94.6,
+          "engine_oil_temp_c": 91.6,
+          "oil_pressure_psi": 51.0,
+          "fuel_consumption_rate_l_hr": 7.4,
+          "fuel_level_percent": 86.0,
+          "exhaust_gas_temp_c": 546.0,
+          "turbocharger_speed_rpm": 115686.0,
+          "turbocharger_pressure_psi": 13.3
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 99,
+          "hydraulic_fluid_temp_c": 65.0,
+          "transmission_fluid_level_percent": 87,
+          "transmission_fluid_temp_c": 73.0,
+          "coolant_level_percent": 90,
+          "oil_quality_index": 0.8
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.07,
+          "transmission_vibration_rms_g": 0.19,
+          "axle_vibration_rms_g": 0.1,
+          "bearing_vibration_rms_g": 0.04
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 170.42440155954964,
+          "tire_pressure_front_left_psi": 27,
+          "tire_pressure_front_right_psi": 27,
+          "tire_pressure_rear_left_psi": 12,
+          "tire_pressure_rear_right_psi": 14,
+          "fuel_pressure_psi": 64.7102715496969
+        },
+        "electrical_system": {
+          "battery_voltage_v": 12.8,
+          "alternator_output_amps": 127.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 21.4,
+          "gps_latitude": 40.1183,
+          "gps_longitude": -88.2021,
+          "working_mode": "Harvesting",
+          "implement_attached": "John Deere 2730 Combo Ripper",
+          "implement_hours_this_session": 7.9
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 0.0
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": 4.1,
+        "humidity_percent": 84.0,
+        "precipitation_mm_24hr": 9.3,
+        "wind_speed_kph": 12.8,
+        "wind_direction": "SE"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_XYZ001",
+        "operator_experience_level": "Intermediate",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2018-01-26T23:00:00Z",
+      "current_operating_hours": 13985.2,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 1874.0,
+          "engine_load_percent": 62.6,
+          "engine_coolant_temp_c": 88.4,
+          "engine_oil_temp_c": 92.9,
+          "oil_pressure_psi": 55.7,
+          "fuel_consumption_rate_l_hr": 14.8,
+          "fuel_level_percent": 60.0,
+          "exhaust_gas_temp_c": 499.0,
+          "turbocharger_speed_rpm": 96842.0,
+          "turbocharger_pressure_psi": 25.2
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 87,
+          "hydraulic_fluid_temp_c": 65.2,
+          "transmission_fluid_level_percent": 95,
+          "transmission_fluid_temp_c": 76.1,
+          "coolant_level_percent": 98,
+          "oil_quality_index": 0.99
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.13,
+          "transmission_vibration_rms_g": 0.07,
+          "axle_vibration_rms_g": 0.05,
+          "bearing_vibration_rms_g": 0.08
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 126.95120141251527,
+          "tire_pressure_front_left_psi": 28,
+          "tire_pressure_front_right_psi": 25,
+          "tire_pressure_rear_left_psi": 18,
+          "tire_pressure_rear_right_psi": 16,
+          "fuel_pressure_psi": 62.37211799603658
+        },
+        "electrical_system": {
+          "battery_voltage_v": 13.1,
+          "alternator_output_amps": 80.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 31.9,
+          "gps_latitude": 40.1783,
+          "gps_longitude": -88.2513,
+          "working_mode": "Transport",
+          "implement_attached": "None",
+          "implement_hours_this_session": 1.9
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 33.4
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": -6.4,
+        "humidity_percent": 74.0,
+        "precipitation_mm_24hr": 0,
+        "wind_speed_kph": 11.4,
+        "wind_direction": "NE"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_ABC789",
+        "operator_experience_level": "Intermediate",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2018-01-27T01:00:00Z",
+      "current_operating_hours": 13992.5,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 1836.0,
+          "engine_load_percent": 59.7,
+          "engine_coolant_temp_c": 87.5,
+          "engine_oil_temp_c": 91.8,
+          "oil_pressure_psi": 42.4,
+          "fuel_consumption_rate_l_hr": 17.3,
+          "fuel_level_percent": 37.0,
+          "exhaust_gas_temp_c": 493.0,
+          "turbocharger_speed_rpm": 72500.0,
+          "turbocharger_pressure_psi": 29.1
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 97,
+          "hydraulic_fluid_temp_c": 64.5,
+          "transmission_fluid_level_percent": 98,
+          "transmission_fluid_temp_c": 78.7,
+          "coolant_level_percent": 91,
+          "oil_quality_index": 0.82
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.18,
+          "transmission_vibration_rms_g": 0.06,
+          "axle_vibration_rms_g": 0.09,
+          "bearing_vibration_rms_g": 0.04
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 197.80927633133834,
+          "tire_pressure_front_left_psi": 27,
+          "tire_pressure_front_right_psi": 26,
+          "tire_pressure_rear_left_psi": 17,
+          "tire_pressure_rear_right_psi": 13,
+          "fuel_pressure_psi": 55.58617398779704
+        },
+        "electrical_system": {
+          "battery_voltage_v": 13.5,
+          "alternator_output_amps": 85.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 20.0,
+          "gps_latitude": 40.1587,
+          "gps_longitude": -88.198,
+          "working_mode": "Transport",
+          "implement_attached": "None",
+          "implement_hours_this_session": 4.5
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 33.4
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": -2.8,
+        "humidity_percent": 72.0,
+        "precipitation_mm_24hr": 0,
+        "wind_speed_kph": 23.6,
+        "wind_direction": "NW"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_DEF456",
+        "operator_experience_level": "Experienced",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2018-01-28T07:00:00Z",
+      "current_operating_hours": 13997.7,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 1731.0,
+          "engine_load_percent": 66.1,
+          "engine_coolant_temp_c": 89.9,
+          "engine_oil_temp_c": 100.2,
+          "oil_pressure_psi": 46.7,
+          "fuel_consumption_rate_l_hr": 20.3,
+          "fuel_level_percent": 42.0,
+          "exhaust_gas_temp_c": 404.0,
+          "turbocharger_speed_rpm": 54642.0,
+          "turbocharger_pressure_psi": 20.0
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 95,
+          "hydraulic_fluid_temp_c": 69.7,
+          "transmission_fluid_level_percent": 89,
+          "transmission_fluid_temp_c": 77.3,
+          "coolant_level_percent": 97,
+          "oil_quality_index": 0.91
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.15,
+          "transmission_vibration_rms_g": 0.11,
+          "axle_vibration_rms_g": 0.09,
+          "bearing_vibration_rms_g": 0.05
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 171.00937201152792,
+          "tire_pressure_front_left_psi": 27,
+          "tire_pressure_front_right_psi": 27,
+          "tire_pressure_rear_left_psi": 17,
+          "tire_pressure_rear_right_psi": 16,
+          "fuel_pressure_psi": 50.73419018849515
+        },
+        "electrical_system": {
+          "battery_voltage_v": 12.7,
+          "alternator_output_amps": 88.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 31.1,
+          "gps_latitude": 40.1724,
+          "gps_longitude": -88.2513,
+          "working_mode": "Transport",
+          "implement_attached": "None",
+          "implement_hours_this_session": 1.0
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 31.3
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": -3.3,
+        "humidity_percent": 83.0,
+        "precipitation_mm_24hr": 0,
+        "wind_speed_kph": 26.4,
+        "wind_direction": "SW"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_DEF456",
+        "operator_experience_level": "Experienced",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2018-01-29T08:00:00Z",
+      "current_operating_hours": 14005.4,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 1620.0,
+          "engine_load_percent": 28.1,
+          "engine_coolant_temp_c": 86.7,
+          "engine_oil_temp_c": 100.4,
+          "oil_pressure_psi": 41.6,
+          "fuel_consumption_rate_l_hr": 23.1,
+          "fuel_level_percent": 49.0,
+          "exhaust_gas_temp_c": 553.0,
+          "turbocharger_speed_rpm": 74281.0,
+          "turbocharger_pressure_psi": 29.2
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 90,
+          "hydraulic_fluid_temp_c": 63.8,
+          "transmission_fluid_level_percent": 96,
+          "transmission_fluid_temp_c": 75.8,
+          "coolant_level_percent": 99,
+          "oil_quality_index": 0.89
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.1,
+          "transmission_vibration_rms_g": 0.08,
+          "axle_vibration_rms_g": 0.05,
+          "bearing_vibration_rms_g": 0.1
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 189.69547371281075,
+          "tire_pressure_front_left_psi": 27,
+          "tire_pressure_front_right_psi": 25,
+          "tire_pressure_rear_left_psi": 14,
+          "tire_pressure_rear_right_psi": 14,
+          "fuel_pressure_psi": 63.39170272429032
+        },
+        "electrical_system": {
+          "battery_voltage_v": 12.7,
+          "alternator_output_amps": 118.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 29.1,
+          "gps_latitude": 40.1695,
+          "gps_longitude": -88.23,
+          "working_mode": "Planting",
+          "implement_attached": "John Deere 2730 Combo Ripper",
+          "implement_hours_this_session": 5.3
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 0.0
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": -0.6,
+        "humidity_percent": 71.0,
+        "precipitation_mm_24hr": 0,
+        "wind_speed_kph": 22.9,
+        "wind_direction": "S"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_XYZ001",
+        "operator_experience_level": "Intermediate",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2018-01-30T08:00:00Z",
+      "current_operating_hours": 14014.9,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 2027.0,
+          "engine_load_percent": 79.8,
+          "engine_coolant_temp_c": 88.0,
+          "engine_oil_temp_c": 102.9,
+          "oil_pressure_psi": 56.5,
+          "fuel_consumption_rate_l_hr": 23.8,
+          "fuel_level_percent": 60.0,
+          "exhaust_gas_temp_c": 423.0,
+          "turbocharger_speed_rpm": 55321.0,
+          "turbocharger_pressure_psi": 21.1
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 88,
+          "hydraulic_fluid_temp_c": 75.7,
+          "transmission_fluid_level_percent": 99,
+          "transmission_fluid_temp_c": 76.5,
+          "coolant_level_percent": 91,
+          "oil_quality_index": 0.97
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.09,
+          "transmission_vibration_rms_g": 0.09,
+          "axle_vibration_rms_g": 0.05,
+          "bearing_vibration_rms_g": 0.08
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 121.29977295183136,
+          "tire_pressure_front_left_psi": 24,
+          "tire_pressure_front_right_psi": 24,
+          "tire_pressure_rear_left_psi": 18,
+          "tire_pressure_rear_right_psi": 17,
+          "fuel_pressure_psi": 56.885798961887616
+        },
+        "electrical_system": {
+          "battery_voltage_v": 13.4,
+          "alternator_output_amps": 98.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 16.4,
+          "gps_latitude": 40.1437,
+          "gps_longitude": -88.2463,
+          "working_mode": "Harvesting",
+          "implement_attached": "John Deere 2730 Combo Ripper",
+          "implement_hours_this_session": 3.7
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 0.0
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": 0.8,
+        "humidity_percent": 72.0,
+        "precipitation_mm_24hr": 4.6,
+        "wind_speed_kph": 11.9,
+        "wind_direction": "NW"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_ABC789",
+        "operator_experience_level": "Experienced",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2018-01-31T21:00:00Z",
+      "current_operating_hours": 14024.2,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 831.0,
+          "engine_load_percent": 10.8,
+          "engine_coolant_temp_c": 92.3,
+          "engine_oil_temp_c": 99.7,
+          "oil_pressure_psi": 53.1,
+          "fuel_consumption_rate_l_hr": 2.5,
+          "fuel_level_percent": 18.0,
+          "exhaust_gas_temp_c": 384.0,
+          "turbocharger_speed_rpm": 124787.0,
+          "turbocharger_pressure_psi": 10.4
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 96,
+          "hydraulic_fluid_temp_c": 82.2,
+          "transmission_fluid_level_percent": 93,
+          "transmission_fluid_temp_c": 70.2,
+          "coolant_level_percent": 93,
+          "oil_quality_index": 0.85
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.07,
+          "transmission_vibration_rms_g": 0.16,
+          "axle_vibration_rms_g": 0.03,
+          "bearing_vibration_rms_g": 0.06
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 189.09560381596737,
+          "tire_pressure_front_left_psi": 26,
+          "tire_pressure_front_right_psi": 22,
+          "tire_pressure_rear_left_psi": 18,
+          "tire_pressure_rear_right_psi": 16,
+          "fuel_pressure_psi": 62.246696816671445
+        },
+        "electrical_system": {
+          "battery_voltage_v": 13.0,
+          "alternator_output_amps": 89.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 48.3,
+          "gps_latitude": 40.1996,
+          "gps_longitude": -88.1719,
+          "working_mode": "Idle",
+          "implement_attached": "None",
+          "implement_hours_this_session": 2.1
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 0.0
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": 4.2,
+        "humidity_percent": 83.0,
+        "precipitation_mm_24hr": 8.3,
+        "wind_speed_kph": 14.1,
+        "wind_direction": "N"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_ABC789",
+        "operator_experience_level": "Experienced",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2018-02-01T01:00:00Z",
+      "current_operating_hours": 14029.5,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 1994.0,
+          "engine_load_percent": 53.3,
+          "engine_coolant_temp_c": 89.5,
+          "engine_oil_temp_c": 97.7,
+          "oil_pressure_psi": 46.1,
+          "fuel_consumption_rate_l_hr": 11.2,
+          "fuel_level_percent": 18.0,
+          "exhaust_gas_temp_c": 435.0,
+          "turbocharger_speed_rpm": 82526.0,
+          "turbocharger_pressure_psi": 10.5
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 97,
+          "hydraulic_fluid_temp_c": 61.5,
+          "transmission_fluid_level_percent": 95,
+          "transmission_fluid_temp_c": 77.8,
+          "coolant_level_percent": 90,
+          "oil_quality_index": 0.89
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.06,
+          "transmission_vibration_rms_g": 0.06,
+          "axle_vibration_rms_g": 0.09,
+          "bearing_vibration_rms_g": 0.03
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 118.28855469155407,
+          "tire_pressure_front_left_psi": 24,
+          "tire_pressure_front_right_psi": 27,
+          "tire_pressure_rear_left_psi": 14,
+          "tire_pressure_rear_right_psi": 15,
+          "fuel_pressure_psi": 55.750216152953605
+        },
+        "electrical_system": {
+          "battery_voltage_v": 12.7,
+          "alternator_output_amps": 107.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 30.1,
+          "gps_latitude": 40.1771,
+          "gps_longitude": -88.2469,
+          "working_mode": "Transport",
+          "implement_attached": "None",
+          "implement_hours_this_session": 7.0
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 38.7
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": -6.1,
+        "humidity_percent": 74.0,
+        "precipitation_mm_24hr": 0,
+        "wind_speed_kph": 20.5,
+        "wind_direction": "NE"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_DEF456",
+        "operator_experience_level": "Experienced",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2018-02-02T00:00:00Z",
+      "current_operating_hours": 14039.0,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 1871.0,
+          "engine_load_percent": 56.4,
+          "engine_coolant_temp_c": 85.8,
+          "engine_oil_temp_c": 104.5,
+          "oil_pressure_psi": 43.7,
+          "fuel_consumption_rate_l_hr": 15.0,
+          "fuel_level_percent": 64.0,
+          "exhaust_gas_temp_c": 464.0,
+          "turbocharger_speed_rpm": 80217.0,
+          "turbocharger_pressure_psi": 20.6
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 88,
+          "hydraulic_fluid_temp_c": 60.4,
+          "transmission_fluid_level_percent": 86,
+          "transmission_fluid_temp_c": 72.2,
+          "coolant_level_percent": 96,
+          "oil_quality_index": 0.8
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.13,
+          "transmission_vibration_rms_g": 0.15,
+          "axle_vibration_rms_g": 0.08,
+          "bearing_vibration_rms_g": 0.08
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 153.74266582507119,
+          "tire_pressure_front_left_psi": 26,
+          "tire_pressure_front_right_psi": 26,
+          "tire_pressure_rear_left_psi": 12,
+          "tire_pressure_rear_right_psi": 17,
+          "fuel_pressure_psi": 51.31200952490062
+        },
+        "electrical_system": {
+          "battery_voltage_v": 13.1,
+          "alternator_output_amps": 125.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 31.4,
+          "gps_latitude": 40.11,
+          "gps_longitude": -88.1049,
+          "working_mode": "Transport",
+          "implement_attached": "None",
+          "implement_hours_this_session": 6.3
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 28.5
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": 3.0,
+        "humidity_percent": 73.0,
+        "precipitation_mm_24hr": 4.7,
+        "wind_speed_kph": 16.8,
+        "wind_direction": "W"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_DEF456",
+        "operator_experience_level": "Experienced",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2018-02-03T15:00:00Z",
+      "current_operating_hours": 14046.3,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 1974.0,
+          "engine_load_percent": 93.8,
+          "engine_coolant_temp_c": 90.4,
+          "engine_oil_temp_c": 96.1,
+          "oil_pressure_psi": 42.0,
+          "fuel_consumption_rate_l_hr": 27.8,
+          "fuel_level_percent": 77.0,
+          "exhaust_gas_temp_c": 509.0,
+          "turbocharger_speed_rpm": 89165.0,
+          "turbocharger_pressure_psi": 12.0
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 88,
+          "hydraulic_fluid_temp_c": 89.8,
+          "transmission_fluid_level_percent": 100,
+          "transmission_fluid_temp_c": 89.1,
+          "coolant_level_percent": 93,
+          "oil_quality_index": 0.83
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.13,
+          "transmission_vibration_rms_g": 0.13,
+          "axle_vibration_rms_g": 0.04,
+          "bearing_vibration_rms_g": 0.07
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 156.1646405816204,
+          "tire_pressure_front_left_psi": 22,
+          "tire_pressure_front_right_psi": 25,
+          "tire_pressure_rear_left_psi": 18,
+          "tire_pressure_rear_right_psi": 16,
+          "fuel_pressure_psi": 55.28457444970966
+        },
+        "electrical_system": {
+          "battery_voltage_v": 12.6,
+          "alternator_output_amps": 121.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 5.5,
+          "gps_latitude": 40.1954,
+          "gps_longitude": -88.2232,
+          "working_mode": "Plowing",
+          "implement_attached": "John Deere 2730 Combo Ripper",
+          "implement_hours_this_session": 7.8
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 8.9
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": -2.7,
+        "humidity_percent": 87.0,
+        "precipitation_mm_24hr": 3.0,
+        "wind_speed_kph": 21.7,
+        "wind_direction": "SE"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_DEF456",
+        "operator_experience_level": "New",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2018-02-04T09:00:00Z",
+      "current_operating_hours": 14054.0,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 1721.0,
+          "engine_load_percent": 92.6,
+          "engine_coolant_temp_c": 93.0,
+          "engine_oil_temp_c": 99.3,
+          "oil_pressure_psi": 42.7,
+          "fuel_consumption_rate_l_hr": 10.7,
+          "fuel_level_percent": 55.0,
+          "exhaust_gas_temp_c": 545.0,
+          "turbocharger_speed_rpm": 119383.0,
+          "turbocharger_pressure_psi": 29.7
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 85,
+          "hydraulic_fluid_temp_c": 60.0,
+          "transmission_fluid_level_percent": 97,
+          "transmission_fluid_temp_c": 85.2,
+          "coolant_level_percent": 95,
+          "oil_quality_index": 0.76
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.1,
+          "transmission_vibration_rms_g": 0.15,
+          "axle_vibration_rms_g": 0.06,
+          "bearing_vibration_rms_g": 0.1
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 110.28591760363402,
+          "tire_pressure_front_left_psi": 28,
+          "tire_pressure_front_right_psi": 25,
+          "tire_pressure_rear_left_psi": 15,
+          "tire_pressure_rear_right_psi": 16,
+          "fuel_pressure_psi": 55.220268562383445
+        },
+        "electrical_system": {
+          "battery_voltage_v": 13.4,
+          "alternator_output_amps": 97.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 34.4,
+          "gps_latitude": 40.1146,
+          "gps_longitude": -88.1441,
+          "working_mode": "Harvesting",
+          "implement_attached": "John Deere 2730 Combo Ripper",
+          "implement_hours_this_session": 1.8
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 0.0
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": 4.4,
+        "humidity_percent": 81.0,
+        "precipitation_mm_24hr": 0,
+        "wind_speed_kph": 18.5,
+        "wind_direction": "S"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_DEF456",
+        "operator_experience_level": "New",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    },
+    {
+      "timestamp": "2018-02-05T17:00:00Z",
+      "current_operating_hours": 14062.9,
+      "remaining_useful_life_hours": Infinity,
+      "failure_imminent": false,
+      "telemetry": {
+        "engine_performance": {
+          "engine_rpm": 1882.0,
+          "engine_load_percent": 79.0,
+          "engine_coolant_temp_c": 87.2,
+          "engine_oil_temp_c": 99.2,
+          "oil_pressure_psi": 52.9,
+          "fuel_consumption_rate_l_hr": 31.3,
+          "fuel_level_percent": 41.0,
+          "exhaust_gas_temp_c": 320.0,
+          "turbocharger_speed_rpm": 57367.0,
+          "turbocharger_pressure_psi": 16.5
+        },
+        "fluid_levels_quality": {
+          "hydraulic_fluid_level_percent": 97,
+          "hydraulic_fluid_temp_c": 79.2,
+          "transmission_fluid_level_percent": 89,
+          "transmission_fluid_temp_c": 88.4,
+          "coolant_level_percent": 97,
+          "oil_quality_index": 0.96
+        },
+        "vibration_data": {
+          "engine_vibration_rms_g": 0.19,
+          "transmission_vibration_rms_g": 0.19,
+          "axle_vibration_rms_g": 0.05,
+          "bearing_vibration_rms_g": 0.06
+        },
+        "pressure_data": {
+          "hydraulic_pressure_bar": 140.18006378170486,
+          "tire_pressure_front_left_psi": 28,
+          "tire_pressure_front_right_psi": 28,
+          "tire_pressure_rear_left_psi": 14,
+          "tire_pressure_rear_right_psi": 16,
+          "fuel_pressure_psi": 61.44391629187722
+        },
+        "electrical_system": {
+          "battery_voltage_v": 13.0,
+          "alternator_output_amps": 134.0,
+          "error_codes": []
+        },
+        "usage_data": {
+          "distance_traveled_km": 21.5,
+          "gps_latitude": 40.1676,
+          "gps_longitude": -88.2664,
+          "working_mode": "Plowing",
+          "implement_attached": "John Deere 2730 Combo Ripper",
+          "implement_hours_this_session": 5.5
+        },
+        "other_sensors": {
+          "vehicle_speed_kph": 6.7
+        }
+      },
+      "environmental_context": {
+        "ambient_temp_c": -1.9,
+        "humidity_percent": 87.0,
+        "precipitation_mm_24hr": 0,
+        "wind_speed_kph": 17.5,
+        "wind_direction": "E"
+      },
+      "human_factors_external": {
+        "operator_id_anonymized": "OPR_ABC789",
+        "operator_experience_level": "New",
+        "region_of_operation": "Midwest US",
+        "customer_complaints": []
+      }
+    }
+  ],
+  "monthly_maintenance_summary": [],
+  "monthly_customer_complaints": []
+}
